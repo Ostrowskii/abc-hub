@@ -1,0 +1,29 @@
+<div class="card">
+  <p-toolbar>
+    <div class="p-toolbar-group-start">
+      <!-- menu lateral -->
+      <div class="card flex justify-content-center">
+        <p-sidebar class="sidebar" [(visible)]="sidebarVisible">
+
+          <button pButton class="sidebar__button" label="configurações"></button>
+
+  <button pButton class="sidebar__button" label="trocar a senha"></button>
+  <button pButton class="sidebar__button" label="trocar de conta"></button>
+  <button pButton class="sidebar__button" label="sair da conta" (click)="logout()"></button>
+
+
+
+
+        </p-sidebar>
+        <p-button class="sidebar" (click)="sidebarVisible = true" icon="pi pi-bars"></p-button>
+      </div>
+      <!-- fim menulateral -->
+    </div>
+
+    <div class="p-toolbar-group-end" >
+      <a (click)="perfilPage()" class="pointerClick">
+        <img src="../../../assets/img/vanessa.jpg" alt="perfil" class="nav__img">
+      </a>
+    </div>
+  </p-toolbar>
+</div>

@@ -1,0 +1,44 @@
+<p-overlayPanel [showCloseIcon]="true" #opb1>
+  <ng-template pTemplate="content">
+    <div *ngIf="selectedCapitulo" class="overlay">
+      <h4>Lição {{ selectedCapitulo.attributes.titulo }}</h4>
+      <p class="overlay-p">{{ selectedCapitulo.attributes.descricao }}</p>
+
+      <button
+        pButton
+        pRipple
+        (click)="comecar()"
+        label="Começar"
+        class="p-button-success"
+      ></button>
+    </div>
+  </ng-template>
+</p-overlayPanel>
+
+
+<ng-container *ngFor="let modulo of moduloData; let i = index">
+  <p-card [header]="modulo.attributes.titulo">
+    <p class="m-0">
+      {{ modulo.attributes.descricao }}
+    </p>
+  </p-card>
+  <div class="module">
+    <img
+      src="/assets/img/plant1.png"
+      alt="teste"
+      [class]="'plant' + evenOrOdd(i + 1)"
+    />
+    <ng-container *ngFor="let capitulo of modulo.attributes.capitulos.data; let x = index">
+
+
+        <app-green-button
+        [label]="capitulo.attributes.numero.toString()"
+        (click)="openOverlay($event, capitulo)"
+        class="green-button"
+        [class]="'green-button'+greenbuttons(i,x)"
+
+        ></app-green-button>
+
+      </ng-container>
+    </div>
+  </ng-container>

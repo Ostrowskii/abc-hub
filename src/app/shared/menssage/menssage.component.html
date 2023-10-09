@@ -1,0 +1,20 @@
+<div class="{{classe}}">
+
+  <div class="balao-mensagem">
+    <div class="flex-container">
+
+      <p class="flex-item">{{nome}}</p>
+      <p class="flex-item align-right">{{dataFormatada}}</p>
+    </div>
+    <p class="mensagem">{{content}}</p>
+
+    <p-divider class="divider" *ngIf="menssage"></p-divider>
+
+    <div class="flex-container" *ngIf="menssage">
+      <p class="flex-item answers">{{qtdComentario}} comentários</p>
+      <button (click)="commentsPage()" class="custom-button p-button p-button-text">
+          <span class="p-button-icon pi pi-chevron-right "></span>
+        </button>
+      </div>
+  </div>
+</div>

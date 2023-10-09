@@ -1,0 +1,12 @@
+<div class="botton-space">
+
+  <p-button icon="pi pi-arrow-left" class="back-button" (click)="voltar()"></p-button>
+  <div *ngIf="capitulo" class="title">
+    <p-card *ngIf="capitulo" [header]="capitulo.attributes.titulo">
+      <p>
+        {{ capitulo.attributes.descricao }}
+      </p>
+    </p-card>
+    <div class="content" [innerHTML]="capitulo.attributes.conteudo"></div>
+  </div>
+</div>

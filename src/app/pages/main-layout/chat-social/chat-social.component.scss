@@ -1,0 +1,36 @@
+//inicio css caixa de mensagem
+.campo-mensagem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 60px;
+  background-color: white;
+  padding: 10px 30px;
+  z-index: 2;
+}
+.botao-enviar {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+  border-radius: 0px 10px 10px 0;
+  cursor: pointer;
+}
+
+.input-mensagem {
+  flex: 1;
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px 0px 0px 10px;
+}
+.input-mensagem:focus {
+  outline: none;
+  border-color: initial;
+  box-shadow: none;
+}
+
+.margin-bottom {
+  margin-bottom: 20vh;
+}

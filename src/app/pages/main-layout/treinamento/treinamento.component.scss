@@ -1,0 +1,70 @@
+.module {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  padding-bottom: 50px;
+}
+.module:last-child {
+  padding-bottom: 200px;
+}
+
+.green-button {
+  margin-top: 30px;
+}
+.overlay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.overlay h4 {
+  margin: 10px 0 10px 0;
+}
+.overlay-p {
+  width: 300px;
+  margin: 10px 0px 30px 0px;
+}
+
+.green-button1 {
+  position: relative;
+  left: -50px;
+}
+.green-button2 {
+  position: relative;
+  left: -70px;
+}
+.green-button3 {
+  position: relative;
+  left: -60px;
+}
+
+.green-button6 {
+  position: relative;
+  left: 50px;
+}
+.green-button7 {
+  position: relative;
+  left: 70px;
+}
+.green-button8 {
+  position: relative;
+  left: 60px;
+}
+
+.plant1 {
+  position: absolute;
+  height: 230px;
+  left: 50%;
+  top: 150px;
+
+  overflow: hidden;
+}
+.plant2 {
+  position: absolute;
+  height: 230px;
+  right: calc(50% + 40px);
+  top: 150px;
+  overflow: hidden;
+}

@@ -1,0 +1,42 @@
+.campo-mensagem {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+}
+.botao-enviar {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+  border-radius: 0px 10px 10px 0;
+  cursor: pointer;
+}
+
+.input-mensagem {
+  flex: 1;
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px 0px 0px 10px;
+}
+.input-mensagem:focus {
+  outline: none;
+  border-color: initial;
+  box-shadow: none;
+}
+//space to see everything
+.margin-bottom {
+  margin-bottom: 20vh;
+}
+// divisor de comentarios
+::ng-deep app-social-comments .p-tag {
+  background-color: #004b1f;
+}
+::ng-deep app-social-comments .p-divider-solid.p-divider-horizontal::before {
+  text-align: center;
+  border-bottom: 1px solid #004b1f;
+}
+//app-social-comments

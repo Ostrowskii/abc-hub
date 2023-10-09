@@ -1,0 +1,28 @@
+<div class="margin-bottom">
+  <div class="center">
+    <div [formGroup]="form" class="campo-pesquisar">
+      <input
+        type="text"
+        formControlName="search"
+        placeholder="Digite sua pesquisa"
+        class="input-mensagem"
+        novalidate
+      />
+      <button
+        pButton
+        type="button"
+        (click)="pesquisar()"
+        icon="pi pi-search"
+        class="botao-enviar"
+      ></button>
+    </div>
+  </div>
+  <app-search-message
+    [seeMore]="false"
+    classe="center"
+    *ngIf="!msgAppear"
+  ></app-search-message>
+  <h3 class="msg-inicial" *ngIf="msgAppear">
+    {{ msgInicial }}
+  </h3>
+</div>

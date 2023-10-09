@@ -1,0 +1,56 @@
+.sidebar__button {
+  width: 100%;
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-left: 10px; /* Espaçamento à esquerda */
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  border-radius: 0;
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior para separação entre botões */
+  border-bottom: 1px solid #a7a7a7; /* Adiciona uma linha (traço) na parte inferior */
+}
+.sidebar__button:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+#editar-info,
+#info {
+  display: flex;
+}
+.flex {
+  display: flex;
+}
+
+.texto {
+  padding: 20px;
+}
+
+.img {
+  display: flex; /* Ativa o flexbox para o contêiner .img */
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center; /* Centraliza horizontalmente os elementos internos */
+  padding: 20px; /* Espaçamento para a imagem */
+}
+.img img {
+  margin: 10px 0;
+  border-radius: 50%; /* Define um raio igual nas quatro bordas para criar um círculo */
+  width: 30vw; /* Ajuste o tamanho conforme necessário */
+  height: 30vw; /* Ajuste o tamanho conforme necessário */
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  // float: right;
+}
+//espaçamento no fim da pagina
+#space-bottom {
+  margin-bottom: 20vh;
+}
+//espaçamento entre os input
+.input {
+  margin: 30px 0;
+  width: 100%;
+}
+.full-width {
+  width: 100%;
+}

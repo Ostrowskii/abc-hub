@@ -1,0 +1,72 @@
+
+<!-- <nav class="nav container">
+  <a href="#" class="nav_logo"> </a>
+  <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+
+      <li class="nav__item">
+        <a class="nav__link" (click)="handleButtonClick(0)" [ngClass]="{'active-link': buttonIndex === 0}">
+          <span class="material-symbols-outlined nav__icon">
+            psychiatry
+            </span>
+          <span class="nav__name">
+            Treinamento
+          </span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a  class="nav__link" (click)="handleButtonClick(1)" [ngClass]="{'active-link': buttonIndex === 1}">
+          <span class="material-symbols-outlined">
+            search
+            </span>
+          <span class="nav__name">
+            Pesquisa
+          </span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" (click)="handleButtonClick(2)" [ngClass]="{'active-link': buttonIndex === 2}">
+          <span class="material-symbols-outlined nav__icon">
+            library_books
+            </span>
+          <span class="nav__name">
+            IA
+          </span>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a  class="nav__link" (click)="handleButtonClick(3)" [ngClass]="{'active-link': buttonIndex === 3}">
+          <span class="material-symbols-outlined nav__icon">
+            groups
+            </span>
+          <span class="nav__name">
+            social
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<div class="content">
+  <!-- Conteúdo da página -->
+
+  <!-- Barra de navegação inferior -->
+  <div class="bottom-navbar">
+    <div class="nav-button" (click)="handleButtonClick(0)" [ngClass]="{'active-link': buttonIndex === 0}">
+      <span class="material-symbols-outlined">psychiatry</span>
+      <span class="nav-title">Treinamento</span>
+    </div>
+    <div class="nav-button" (click)="handleButtonClick(1)"  [ngClass]="{'active-link': buttonIndex === 1}">
+      <span class="material-symbols-outlined">search</span>
+      <span class="nav-title">Pesquisa</span>
+    </div>
+    <div class="nav-button" (click)="handleButtonClick(2)"  [ngClass]="{'active-link': buttonIndex === 2}">
+      <span class="material-symbols-outlined">library_books</span>
+      <span class="nav-title">IA</span>
+    </div>
+    <div class="nav-button" (click)="handleButtonClick(3)"  [ngClass]="{'active-link': buttonIndex === 3}">
+      <span class="material-symbols-outlined">groups</span>
+      <span class="nav-title">Social</span>
+    </div>
+  </div>
+</div>

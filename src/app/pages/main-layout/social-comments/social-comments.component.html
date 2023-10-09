@@ -1,0 +1,15 @@
+<div class="campo-mensagem">
+  <input type="text" (key.enter)="enviarMensagem()" [(ngModel)]="mensagem" placeholder="Digite sua mensagem" class="input-mensagem" novalidate>
+  <button pButton type="button" (click)="enviarMensagem()" icon="pi pi-send" class="botao-enviar"></button>
+</div>
+<div class="margin-bottom">
+
+  <app-menssage [menssage]="isMessage" [nome]="selectedMensagem.nome" [classe]="selectedMensagem.username == userInfo.username ? 'me' : ''" [content]="selectedMensagem.content"></app-menssage>
+  <p-divider align="center">
+    <span class="p-tag">Comentários</span>
+</p-divider>
+  <ng-container *ngFor="let comentario of historicoComentarios">
+    <app-menssage [menssage]="isMessage" [classe]="comentario.username == userInfo.username ? 'me' : ''" [content]="comentario.content"  [nome]="comentario.nome" [dataMensagem]="formataData(comentario.dataEnvio)"></app-menssage>
+
+  </ng-container>
+</div>

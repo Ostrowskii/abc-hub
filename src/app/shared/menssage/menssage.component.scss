@@ -1,0 +1,61 @@
+.balao-mensagem {
+  background-color: #002e13; /* Cor de fundo do balão */
+  color: #fff; /* Cor do texto dentro do balão */
+  padding: 10px; /* Espaçamento interno do balão */
+  border-radius: 10px; /* Borda arredondada do balão */
+  max-width: 80%; /* Largura máxima do balão */
+  min-width: 340px;
+  margin: 10px; /* Margem ao redor do balão */
+  word-wrap: break-word; /* Quebra de palavra para evitar que o texto transborde */
+  display: inline-block; /* Torna o balão do tamanho do conteúdo */
+}
+.me {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-container {
+  display: flex;
+}
+.flex-item {
+  flex: 1;
+  margin: 0;
+}
+
+.align-right {
+  display: flex; /* Torna este elemento flexível */
+  justify-content: flex-end; /* Alinha este elemento à direita dentro do flexível */
+}
+
+.answers {
+  margin: 10px 0;
+}
+
+::ng-deep .p-divider.p-divider-horizontal {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+//botão para entrar nos comentarios
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* Defina a largura desejada para o botão */
+  height: 40px; /* Defina a altura desejada para o botão */
+  background-color: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px 0 0 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #004b1f;
+}
+
+.custom-button:active {
+  background-color: #008537;
+}

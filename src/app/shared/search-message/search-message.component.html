@@ -1,0 +1,35 @@
+<div class="{{ classe }}">
+  <div class="balao-mensagem">
+    <div class="flex-container"*ngIf="seeMore">
+      <p class="flex-item">Inteligência Artificial</p>
+      <p class="flex-item align-right">9:35 02/10/23</p>
+    </div>
+    <p class="menssagem" *ngIf="seeMore">
+      Não foi possível conectar-se à rede para fornecer respostas precisas. No
+      entanto, você ainda pode consultar nosso material e sistema de pesquisa
+      mesmo sem conexão com a internet:
+    </p>
+    <div *ngFor="let card of cardsData">
+      <p-card [header]="card.title">
+        <p class="m-0">{{ card.content }}</p>
+
+        <div class="card flex justify-content-center">
+          <p-button
+            label="Ler"
+            (onClick)="ler(card.id)"
+            styleClass="p-button-success "
+            id="centered-button"
+          ></p-button>
+        </div>
+      </p-card>
+      <p-divider class="divider" *ngIf="seeMore" ></p-divider>
+    </div>
+
+    <div class="flex-container vertical-center" *ngIf="seeMore">
+      <p class="flex-item">ver mais</p>
+      <button class="custom-button p-button p-button-text">
+        <span class="p-button-icon pi pi-chevron-right"></span>
+      </button>
+    </div>
+  </div>
+</div>

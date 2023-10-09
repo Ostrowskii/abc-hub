@@ -1,0 +1,47 @@
+//campo de pesquisa
+.center {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  width: 100%;
+}
+
+.campo-pesquisar {
+  // max-width: 700px;
+  top: 60px;
+  background-color: white;
+  padding: 10px 30px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  z-index: 2;
+}
+.botao-enviar {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+  border-radius: 0px 10px 10px 0;
+  cursor: pointer;
+}
+
+.input-mensagem {
+  flex: 1;
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px 0px 0px 10px;
+}
+.input-mensagem:focus {
+  outline: none;
+  border-color: initial;
+  box-shadow: none;
+}
+// margem para exibir todo o conteudo
+.margin-bottom {
+  margin-bottom: 20vh;
+}
+//mensagem inicial e de quando n tem conteudo
+.msg-inicial {
+  text-align: center;
+}

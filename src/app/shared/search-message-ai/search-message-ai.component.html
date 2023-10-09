@@ -1,0 +1,35 @@
+<div class="me">
+  <div class="balao-mensagem">
+    <div class="flex-container">
+      <p class="flex-item">{{nome}}</p>
+      <p class="flex-item align-right">{{dataFormatada}}</p>
+    </div>
+    <p class="menssagem">
+      Não foi possível conectar-se à rede para fornecer respostas precisas. No
+      entanto, você ainda pode consultar nosso material e sistema de pesquisa
+      mesmo sem conexão com a internet:
+    </p>
+    <div *ngFor="let card of cardsData; let i=index">
+      <p-card *ngIf="i<5" [header]="card.title">
+        <p class="m-0">{{ card.content }}</p>
+
+        <div class="card flex justify-content-center">
+          <p-button
+            label="Ler"
+            (onClick)="ler(card.id)"
+            styleClass="p-button-success "
+            id="centered-button"
+          ></p-button>
+        </div>
+      </p-card>
+      <p-divider class="divider" ></p-divider>
+    </div>
+
+   <div class="flex-container vertical-center">
+      <p class="flex-item">Você pode pesquisar por mais materiais na aba de pesquisa</p>
+      <button (click)="goToPesquisa()" class="custom-button p-button p-button-text">
+        <span class="p-button-icon pi pi-chevron-right"></span>
+      </button>
+    </div>
+  </div>
+</div>

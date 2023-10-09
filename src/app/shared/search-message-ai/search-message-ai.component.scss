@@ -1,0 +1,92 @@
+//balao de msg
+.balao-mensagem {
+  background-color: #002e13; /* Cor de fundo do balão */
+  color: #fff; /* Cor do texto dentro do balão */
+  padding: 10px; /* Espaçamento interno do balão */
+  border-radius: 10px; /* Borda arredondada do balão */
+  max-width: 80%; /* Largura máxima do balão */
+  margin: 10px; /* Margem ao redor do balão */
+  word-wrap: break-word; /* Quebra de palavra para evitar que o texto transborde */
+  display: inline-block; /* Torna o balão do tamanho do conteúdo */
+}
+
+.flex-container {
+  display: flex;
+}
+//ajusta o nome da ia e a data para ficarem em lados opostos
+.flex-item {
+  flex: 1;
+  margin: 0;
+}
+//alinha a data a direita
+.align-right {
+  display: flex; /* Torna este elemento flexível */
+  justify-content: flex-end; /* Alinha este elemento à direita dentro do flexível */
+}
+//justifica o texto
+.menssagem {
+  text-align: justify;
+}
+//centraliza o botão ler
+#centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// css do botão ler
+::ng-deep app-search-message-ai .p-button.p-button-success,
+.p-buttonset.p-button-success > .p-button,
+.p-splitbutton.p-button-success > .p-button {
+  padding: 10px 30px !important;
+  background-color: #00662a !important;
+  border: none;
+  z-index: 0;
+}
+//centraliza verticalmente o ver mais
+.vertical-center {
+  align-items: center;
+}
+//css do divisor
+::ng-deep app-search-message-ai .p-divider.p-divider-horizontal {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+//css do card
+::ng-deep app-search-message-ai .p-card-content {
+  padding: 0;
+}
+::ng-deep app-search-message-ai .p-card-body {
+  margin: 20px 0;
+  background-color: #004b1f;
+  border-radius: 0.3em;
+  color: white;
+}
+//botão para entrar no conteudo do curso
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px 0 0 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #004b1f;
+}
+
+.custom-button:active {
+  background-color: #008537;
+}
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

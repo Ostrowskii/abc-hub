@@ -1,0 +1,25 @@
+.nav__img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.sidebar__button {
+  width: 100%;
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-left: 10px; /* Espaçamento à esquerda */
+  background: none; /* Remove o fundo */
+  border: none; /* Remove a borda */
+  border-radius: 0;
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior para separação entre botões */
+  border-bottom: 1px solid #a7a7a7; /* Adiciona uma linha (traço) na parte inferior */
+}
+.sidebar__button:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+//fazer com q o poiter do mouse fique no clicavel
+.pointerClick {
+  cursor: pointer;
+}

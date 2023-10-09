@@ -1,0 +1,43 @@
+.central {
+  width: 80vw;
+  max-width: 600px;
+  height: 600px;
+  background-color: rgba(201, 214, 196, 0.8);
+  border: 1px solid rgb(166, 177, 165);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 2em;
+  padding: 2em;
+  transform: translate(-50%, -50%);
+}
+.itens-container {
+  display: flex;
+  flex-direction: column; /* Os itens serão empilhados verticalmente */
+  justify-content: center; /* Centraliza verticalmente os itens */
+  align-items: center; /* Centraliza horizontalmente os itens */
+  height: 100%; /* Preenche toda a altura do contêiner pai */
+}
+
+.width240 {
+  margin: 20px 0 0 0;
+  width: 240px;
+}
+
+.error-border input {
+  border: 2px solid red;
+}
+.letra-pequena {
+  font-size: small;
+  margin: 5px 0 30px;
+  text-decoration: underline;
+}
+//background
+.seletor-do-elemento {
+  height: 100vh;
+  //Image by <a href="https://www.freepik.com/free-vector/hand-drawn-houseplant-collection_13398415.htm#query=plant%20drawing&position=12&from_view=keyword&track=ais">Freepik</a>
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-houseplant-collection_23-2148916130.jpg?w=740&t=st=1696443176~exp=1696443776~hmac=4d3d9557a043f1e0dfeca85f0ac48faf8b3d9d38a5e7d758f316bfd4aca67ed6");
+  background-size: cover; /* A imagem cobrirá todo o elemento, podendo ser cortada */
+  background-position: center center; /* Centraliza a imagem horizontalmente e verticalmente */
+  background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+}
