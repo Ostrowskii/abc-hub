@@ -55,7 +55,8 @@
 
 .plant1 {
   position: absolute;
-  height: 230px;
+  width: 48vw;
+  max-width: 230px;
   left: 50%;
   top: 150px;
 
@@ -63,7 +64,8 @@
 }
 .plant2 {
   position: absolute;
-  height: 230px;
+  width: 48vw;
+  max-width: 230px;
   right: calc(50% + 40px);
   top: 150px;
   overflow: hidden;

@@ -23,6 +23,9 @@
   margin: 20px 0 0 0;
   width: 240px;
 }
+::ng-deep app-login .p-inputtext {
+  width: 240px;
+}
 
 .error-border input {
   border: 2px solid red;

@@ -4,12 +4,6 @@
   <button pButton type="button" (click)="enviarMensagem()" icon="pi pi-send" class="botao-enviar"></button>
 </div>
 <div class="margin-bottom">
-
-  <app-menssage [menssage]="isMessage" [classe]="msg" content="Lorem ipsum dolor sit amet, "></app-menssage>
-  <app-menssage [menssage]="isMessage" classe="me" content=" eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"></app-menssage>
-  <app-menssage [menssage]="isMessage" [classe]="msg" content="nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"></app-menssage>
-  <app-menssage [menssage]="isMessage" classe="me" content=" eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"></app-menssage>
-  <app-search-message-ai></app-search-message-ai>
   <ng-container *ngFor="let message of historicoMensagens">
     <ng-container *ngIf="message.isSearchMessage; else elseTemplate">
         <app-search-message-ai [nome]="message.nome" [cardsData]="message.results" [dataEnvio]="message.dataEnvio"></app-search-message-ai>

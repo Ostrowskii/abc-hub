@@ -23,3 +23,12 @@
 .pointerClick {
   cursor: pointer;
 }
+.card {
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+}
+::ng-deep app-top-nav-bar .p-toolbar {
+  border-radius: 0 !important;
+}

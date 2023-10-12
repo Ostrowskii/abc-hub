@@ -22,7 +22,7 @@ export class SearchService {
   constructor(private moduloService: ModuloService) {}
 
   loadContent() {
-    this.moduloService.loadModulosAPI().subscribe();
+    //this.moduloService.loadModulosAPI().subscribe();
     this.moduloService.getModulos().subscribe({
       next: (res) => {
         this.capitulos = [];

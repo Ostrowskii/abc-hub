@@ -20,7 +20,7 @@ export class SearchComponent {
     search: [''],
   });
   //mensagem caso não tenha pesquisa
-  msgInicial = 'Tente pesquisar em nossa ferramenta de pesquisa sofsticada';
+  msgInicial = 'Tente pesquisar em nossa ferramenta de pesquisa offline';
   msgAppear = true;
   constructor(private fb: FormBuilder, private searchService: SearchService) {}
 

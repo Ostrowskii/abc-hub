@@ -28,6 +28,11 @@ export class MainLayoutComponent {
           this.chatService.loadMessagesAPI().subscribe();
           this.chatService.startSocket();
         },
+        error: () => {
+          this.searchService.loadContent();
+          this.chatService.loadMessagesAPI().subscribe();
+          this.chatService.startSocket();
+        },
       });
   }
 }
