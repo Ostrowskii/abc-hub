@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC HUB - Aumente sua Produtividade Aplicando Práticas Sustentáveis</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+  <body
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'b eh': darkMode === true}"
+  >
+    <!-- ===== Header Start ===== -->
+    <header
+  class="g s r vd ya cj"
+  :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+>
+  <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+    <div class="vd to/4 tc wf yf">
+      <a href="index.html">
+        <img class="om" src="images/logo-abc.png" alt="Logo Light" />
+        <img class="xc nm" src="images/logo-abc.png" alt="Logo Dark" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button class="po rc" @click="navigationOpen = !navigationOpen">
+        <span class="rc i pf re pd">
+          <span class="du-block h q vd yc">
+            <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+            <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+            <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+          </span>
+          <span class="du-block h q vd yc lf">
+            <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+            <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="vd wo/4 sd qo f ho oo wf yf"
+      :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
+    >
+      <nav>
+        <ul class="tc _o sf yo cg ep">
+          <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }"></a></li>
+        </ul>
+      </nav>
+
+      <div class="tc wf ig pb no">
+        <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+          <label class="rc ab i">
+            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+            <!-- Icon Sun -->
+            <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""/>
+            </svg>
+            <!-- Icon Sun -->
+            <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+          </label>
+        </div>
+
+        <a href="https://abchub.lowee.xyz/login" :class="{ 'nk yl' : page === 'home', 'ok' : page === 'home' && stickyMenu }" class="ek pk xl">Entrar</a>
+        <a href="https://abchub.lowee.xyz/create-account" :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }" class="lk gh dk rg tc wf xf _l gi hi">Criar Conta</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Start ===== -->
+      <section class="gj do ir hj sp jr i pg">
+        <!-- Hero Images -->
+        <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
+          <img src="images/shape-01.svg" alt="shape" class="xc 2xl:ud-block h t -ud-left-[10%] ua" />
+          <img src="images/shape-02.svg" alt="shape" class="xc 2xl:ud-block h u p va" />
+          <img src="images/shape-03.svg" alt="shape" class="xc 2xl:ud-block h v w va" />
+          <img src="images/shape-04.svg" alt="shape" class="h q r" />
+          <img src="images/hero.png" alt="Woman" class="h q r ua" />
+        </div>
+
+        <!-- Hero Content -->
+        <div class="bb ze ki xn 2xl:ud-px-0">
+          <div class="tc _o">
+            <div class="animate_left jn/2">
+              <h1 class="fk vj zp or kk wm wb">Maximize sua Produtividade Agrícola com o Plano ABC+</h1>
+              <p class="fq">
+                Aproveite ao máximo o Plano ABC+ e transforme sua agricultura. Junte-se a milhares de produtores rurais que estão colhendo os benefícios da sustentabilidade e da produtividade. Entre em ação hoje mesmo!
+              </p>
+
+              <div class="tc tf yo zf mb">
+                <a style="background-color: rgb(32, 202, 102);" href="https://abchub.lowee.xyz/" class="ek jk lk gh gi hi rg ml il vc _d _l"
+                  >Começar Agora</a
+                >
+
+                <!-- <span class="tc sf">
+                  <a href="#" class="inline-block ek xj kk wm"> Entre na plataforma ABC HUB </a>
+                  <span class="inline-block">Nossa plataforma oferece as ferramentas necessárias para implentar práticas sustentáveis do ABC+ para aumentar sua produtividade. </span>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Hero End ===== -->
+
+      <!-- ===== Small Features Start ===== -->
+      <section id="features">
+        <div class="bb ze ki yn 2xl:ud-px-12.5">
+          <div class="tc uf zo xf ap zf bp mq">
+            <!-- Small Features Item -->
+            <div class="animate_top kn to/3 tc cg oq">
+              <div class="tc wf xf cf ae cd rg mh">
+                <img src="images/icon-01.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ek yj go kk wm xb">Aumente a produtividade da sua fazenda.</h4>
+                <p>Desenvolva práticas agrícolas sustentáveis que otimizam o uso de recursos e aumentam a produção de culturas de forma eficiente.</p>
+              </div>
+            </div>
+
+            <!-- Small Features Item -->
+            <div class="animate_top kn to/3 tc cg oq">
+              <div class="tc wf xf cf ae cd rg nh">
+                <img src="images/icon-02.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ek yj go kk wm xb">Contribua para a preservação do meio ambiente.</h4>
+                <p>Adote a agricultura de baixa emissão de carbono, reduzindo o impacto ambiental e contribuindo para a conservação dos recursos naturais.</p>
+              </div>
+            </div>
+
+            <!-- Small Features Item -->
+            <div class="animate_top kn to/3 tc cg oq">
+              <div class="tc wf xf cf ae cd rg oh">
+                <img src="images/icon-03.svg" alt="Icon" />
+              </div>
+              <div>
+                <h4 class="ek yj go kk wm xb">Acesso a créditos e benefícios especiais</h4>
+                <p>Beneficie-se de programas de incentivo e acesso a créditos financeiros voltados para a implementação das práticas sustentáveis do Plano ABC+.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Small Features End ===== -->
+
+      <!-- ===== About Start ===== -->
+      <!-- ===== About End ===== -->
+
+      <!-- ===== Team Start ===== -->
+      <!-- ===== Team End ===== -->
+
+      <!-- ===== Services Start ===== -->
+      <section class="lj tp kr" style="margin-top: 5rem;">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `Conheça o que nossa plataforma tem para te oferecer de melhor`, sectionTitleText: `Estes são os principais recursos do ABC HUB para te ajudar e dar as ferramentas necessárias para alavancar sua produtividade usando práticas sustentáveis.`}"
+        >
+          <div class="animate_top bb ze rj ki xn vq">
+    <h2
+            x-text="sectionTitle"
+            class="fk vj pr kk wm on/5 gq/2 bb _b"
+    >
+    </h2>
+    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+</div>
+
+
+        </div>
+        <!-- Section Title End -->
+
+        <div class="bb ze ki xn yq mb en">
+          <div class="wc qf pn xo ng">
+            <!-- Service Item -->
+            <div class="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-04.svg" alt="Icon" />
+              <h4 class="ek zj kk wm nb _b">Treinamento Completo</h4>
+              <p>Conte com nosso curso essencial e prático, que fornece acesso a treinamentos cruciais para a implementação do plano ABC+.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-05.svg" alt="Icon" />
+              <h4 class="ek zj kk wm nb _b">Busca Offline</h4>
+              <p>Também disponibilizamos uma busca offline para que os produtores possam continuar aprendendo e resolvendo dúvidas mesmo em locais sem acesso à internet.</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-06.svg" alt="Icon" />
+              <h4 class="ek zj kk wm nb _b">Chat com Inteligência Artificial</h4>
+              <p>Tenha em mãos um assistente sempre disponível para tirar suas dúvidas e te ajudar a aplicar o plano de maneira eficaz e direcionada às suas necessidades..</p>
+            </div>
+
+            <!-- Service Item -->
+            <div class="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-07.svg" alt="Icon" />
+              <h4 class="ek zj kk wm nb _b">Chat com Comunidade</h4>
+              <p>Conecte-se com outros produtores rurais e compartilhe conhecimento e experiências entre si.</p>
+            </div>
+
+
+        </div>
+      </section>
+      <!-- ===== Services End ===== -->
+
+      <!-- ===== Pricing Table Start ===== -->
+ 
+      <!-- ===== Pricing Table End ===== -->
+
+      <!-- ===== Projects Start ===== -->
+ 
+      <!-- ===== Projects End ===== -->
+
+      <!-- ===== Testimonials Start ===== -->
+     <!--  <section class="hj rp hr">
+        <div
+          x-data="{ sectionTitle: `Client’s Testimonials`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        >
+          <div class="animate_top bb ze rj ki xn vq">
+    <h2
+            x-text="sectionTitle"
+            class="fk vj pr kk wm on/5 gq/2 bb _b"
+    >
+    </h2>
+    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+</div>
+
+
+        </div>
+
+        <div class="bb ze ki xn ar">
+          <div class="animate_top jb cq">
+            <div class="swiper testimonial-01">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm bi qj">
+                    <span class="rc je md/2 gh xg h q r"></span>
+                    <span class="rc je md/2 mh yg h q p"></span>
+
+                    <div class="tc sf rn tn un zf dp">
+                      <img class="bf" src="images/testimonial.png" alt="User" />
+
+                      <div>
+                        <img src="images/icon-quote.svg" alt="Quote" />
+                        <p class="ek ik xj _p kc fb">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula. Mauris consequat justo volutpat.
+                        </p>
+
+                        <div class="tc yf vf">
+                          <div>
+                            <span class="rc ek xj kk wm zb">Devid Smith</span>
+                            <span class="rc">Founter @democompany</span>
+                          </div>
+
+                          <img class="rk" src="images/brand-light-02.svg" alt="Brand" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tc wf xf fg jb">
+                <div
+                  class="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym"
+                >
+                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z"
+                      fill=""
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym"
+                >
+                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" fill="" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- ===== Testimonials End ===== -->
+
+      <!-- ===== Counter Start ===== -->
+
+      <!-- ===== Counter End ===== -->
+
+      <!-- ===== Clients Start ===== -->
+  
+      <!-- ===== Clients End ===== -->
+
+      <!-- ===== Blog Start ===== -->
+  
+      <!-- ===== Blog End ===== -->
+
+      <!-- ===== Contact Start ===== -->
+      <!-- ===== Contact End ===== -->
+
+      <!-- ===== CTA Start ===== -->
+      <section class="i pg gh ji" style="background-color: #004b1f;">
+  <!-- Bg Shape -->
+  <img class="h p q" src="images/shape-16.svg" alt="Bg Shape" />
+
+  <div class="bb ye i z-10 ki xn dr">
+    <div class="tc uf sn tn un gg">
+      <div class="animate_left to/2">
+        <h2 class="fk vj zp pr lk ac">
+          Aumente a Produtividade e Proteja o Futuro da Sua Propriedade Rural
+        </h2>
+        <p class="lk">
+          É hora de colher os frutos do futuro sustentável para a sua propriedade rural. Junte-se a nós e descubra como o Plano ABC+ pode revolucionar a sua agricultura. Entre em ação hoje para aumentar a produtividade e proteger o meio ambiente.
+        </p>
+      </div>
+      <div class="animate_right bf">
+        <a href="https://abchub.lowee.xyz/" class="vc ek kk hh rg ol il cm gi hi">
+            Começar Agora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ===== CTA End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button
+  class="xc wf xf ie ld vg sr gh tr g sa ta _a"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ 'uc' : scrollTop }"
+>
+  <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+  </svg>
+</button>
+
+    <!-- ====== Back To Top End ===== -->
+
+    <script>
+      //  Pricing Table
+      const setup = () => {
+        return {
+          isNavOpen: false,
+
+          billPlan: 'monthly',
+
+          plans: [
+            {
+              name: 'Starter',
+              price: {
+                monthly: 29,
+                annually: 29 * 12 - 199,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+            {
+              name: 'Growth Plan',
+              price: {
+                monthly: 59,
+                annually: 59 * 12 - 100,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+            {
+              name: 'Business',
+              price: {
+                monthly: 139,
+                annually: 139 * 12 - 100,
+              },
+              features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+            },
+          ],
+        };
+      };
+    </script>
+  <script defer src="bundle.js"></script></body>
+</html>
