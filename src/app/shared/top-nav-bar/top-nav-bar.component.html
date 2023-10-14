@@ -4,22 +4,16 @@
       <!-- menu lateral -->
       <div class="flex justify-content-center">
         <p-sidebar class="sidebar" [(visible)]="sidebarVisible">
-
-          <button pButton class="sidebar__button" label="configurações"></button>
-
-          <button pButton class="sidebar__button" label="trocar a senha"></button>
-          <button pButton class="sidebar__button" label="trocar de conta"></button>
+          <button pButton class="sidebar__button" label="perfil"></button>
           <button pButton class="sidebar__button" label="sair da conta" (click)="logout()"></button>
-
-
-
-
         </p-sidebar>
         <p-button class="sidebar" (click)="sidebarVisible = true" icon="pi pi-bars"></p-button>
       </div>
       <!-- fim menulateral -->
     </div>
 
+    <!-- COLOCA A LOGO DO APP AQUI -->
+    <img class="logo" src="/assets/img/logoabchub-without-border.png" alt="logo abc hub">
     <div class="p-toolbar-group-end" >
       <a (click)="perfilPage()" class="pointerClick">
         <img src="../../../assets/img/vanessa.jpg" alt="perfil" class="nav__img">

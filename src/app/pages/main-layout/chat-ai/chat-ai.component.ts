@@ -33,12 +33,12 @@ export class ChatAiComponent {
         console.log(res);
       },
     });
+    this.loadAiHistory();
   }
 
   enviarMensagem() {
     if (this.mensagem.trim() !== '') {
       const msg = this.mensagem;
-      //this.historicoMensagens.push(this.mensagem);
       this.enviarMinhaMensagem(msg);
       this.responder(msg);
       this.mensagem = '';
@@ -55,6 +55,7 @@ export class ChatAiComponent {
       nome: this.userInfo.nome ? this.userInfo.nome : this.userInfo.username,
     };
     this.historicoMensagens.push(message);
+    this.saveAiHistory();
     setTimeout(() => {
       const posicaoAtual = window.scrollY || window.pageYOffset;
       window.scrollTo(0, posicaoAtual + 120);
@@ -86,6 +87,7 @@ export class ChatAiComponent {
           nome: 'ABC+ IA',
         };
         this.historicoMensagens.push(message);
+        this.saveAiHistory();
         setTimeout(() => {
           const posicaoAtual = window.scrollY || window.pageYOffset;
           window.scrollTo(0, posicaoAtual + 120);
@@ -123,6 +125,7 @@ export class ChatAiComponent {
 
     setTimeout(() => {
       this.historicoMensagens.push(message);
+      this.saveAiHistory();
       setTimeout(() => {
         const posicaoAtual = window.scrollY || window.pageYOffset;
         window.scrollTo(0, posicaoAtual + 120);
@@ -139,5 +142,17 @@ export class ChatAiComponent {
         return v.toString(16);
       }
     );
+  }
+
+  saveAiHistory() {
+    localStorage.setItem('history-ai', JSON.stringify(this.historicoMensagens));
+  }
+
+  loadAiHistory() {
+    const aiHistoryStore = localStorage.getItem('history-ai');
+    if (aiHistoryStore) {
+      const aiHistoryData: MessageChatAi[] = JSON.parse(aiHistoryStore);
+      this.historicoMensagens = [...aiHistoryData];
+    }
   }
 }
