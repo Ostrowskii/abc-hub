@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { FileUpload, FileUploadEvent } from 'primeng/fileupload';
 
+import { FormControl } from '@angular/forms';
+
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 interface UploadEvent {
@@ -25,11 +27,15 @@ export class PerfilComponent {
 
   constructor(private messageService: MessageService, private fb: FormBuilder) {
     this.perfilForm = this.fb.group({
+      nome: ['Vanessa', Validators.required],
       username: ['', Validators.required], // Exemplo de campo obrigatório
-      // email: ['vanessa@nautilusti.com', Validators.email],
+      email: ['vanessa@nautilusti.com', Validators.email],
       sexo: ['', Validators.required], // Exemplo de campo obrigatório
-      dataNascimento: ['', Validators.required], // Exemplo de campo obrigatório
+      dataNascimento: ['12/03/2002'], // Exemplo de campo obrigatório
+      // dataNascimentoExibir: new FormControl(new Date('2002-03-12')),
     });
+    this.perfilForm.controls['username'].disable();
+    this.perfilForm.controls['email'].disable();
   }
   sexos: Sexo[] | undefined;
   selectedSexo: Sexo | undefined;
@@ -50,13 +56,10 @@ export class PerfilComponent {
       { name: 'Masculino', code: 'M' },
     ];
   }
-  user = {
-    name: 'Vanessa Ostroski',
-    email: 'vanessa@nautilusti.com',
-    sexValue: {
-      name: 'Masculino',
-      code: 'M',
-    },
-    birthDate: '01/06/23',
-  };
+
+  salvar() {
+    this.perfilForm.enabled
+      ? this.perfilForm.disable()
+      : this.perfilForm.enable();
+  }
 }

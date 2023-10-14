@@ -1,61 +1,38 @@
 <div id="space-bottom">
   <p-messages></p-messages>
-  <div id="info">
-    <div class="texto">
-
-      <span class="p-float-label input">
-        <input disabled pInputText id="username" [value]="user.name"/>
-        <label htmlFor="username" >Nome do usuário</label>
-      </span>
-
-      <span class="p-float-label input">
-        <input disabled pInputText id="email" [value]="user.email"/>
-        <label htmlFor="email">Email</label>
-      </span>
-
-      <span class="p-float-label input card flex justify-content-center input full-width">
-        <p-dropdown
-          [options]="sexos"
-          [(ngModel)]="user.sexValue"
-          optionLabel="name"
-          id="sexo"
-          [disabled]="true"
-        ></p-dropdown>
-        <label htmlFor="sexo">sexo</label>
-      </span>
-
-      <p>data de nascimento: 01/06/1999</p>
-    </div>
-    <div class="img">
-      <img [src]="uploadedImageData" alt="Imagem Enviada" />
-
-      <p>nivel: 1</p>
-    </div>
-  </div>
-
-
-
-
   <!-- editar info -->
-
-
-
   <div id="editar-info">
     <form [formGroup]="perfilForm" class="flex">
       <div class="texto">
+        <div class="img">
+          <img [src]="uploadedImageData" alt="Imagem Enviada" />
+          <p-fileUpload
+            mode="basic"
+            name="demo[]"
+            url="https://www.primefaces.org/cdn/api/upload.php"
+            accept="image/*"
+            (onUpload)="onBasicUploadAuto($event)"
+            [auto]="true"
+            chooseLabel="Browse"
+          ></p-fileUpload>
+        </div>
+        <span class="p-float-label input">
+          <input pInputText id="nome" formControlName="nome" />
+          <label htmlFor="nome">Nome</label>
+        </span>
         <!-- nome do ususario -->
         <span class="p-float-label input">
-          <input pInputText id="username" formControlName="username" />
+          <input pInputText id="username" formControlName="username"/>
           <label htmlFor="username">Nome do usuário</label>
         </span>
 
           <!-- email -->
           <span class="p-float-label input">
-            <input pInputText id="email" formControlName="email" readonly />
+            <input pInputText id="email" formControlName="email" />
             <label htmlFor="email">Email</label>
           </span>
         <!-- sexo feminino ou masculino -->
-        <span class="p-float-label input card flex justify-content-center input">
+        <span class="p-float-label input card flex justify-content-center input p-fluid">
           <p-dropdown
             [options]="sexos"
             optionLabel="name"
@@ -69,23 +46,12 @@
           <p-calendar [showIcon]="true" formControlName="dataNascimento"></p-calendar>
           <label htmlFor="dtNasc">Data de Nascimento</label>
         </div>
+        <button pButton pRipple (click)="salvar()">Salvar</button>
       </div>
 
       <!-- Mover o código da imagem e do upload aqui -->
-      <div class="img">
-        <img [src]="uploadedImageData" alt="Imagem Enviada" />
-        <p-fileUpload
-          mode="basic"
-          name="demo[]"
-          url="https://www.primefaces.org/cdn/api/upload.php"
-          accept="image/*"
-          (onUpload)="onBasicUploadAuto($event)"
-          [auto]="true"
-          chooseLabel="Browse"
-        ></p-fileUpload>
-      </div>
+
     </form>
   </div>
-
 
 </div>
