@@ -1,5 +1,5 @@
 export const environment = {
-  API_URL: 'https://api-abchub.lowee.xyz/api',
-  AI_TOKEN: 'jvCf9Vux7w5d3jxItc90pMORtOkObkWJmDR1pCwCEJs=',
-  SERVER_URL: 'https://api-abchub.lowee.xyz',
+  API_URL: 'https://api.abchub.com.br/api',
+  AI_TOKEN: 'veWp/WprggLLdawoHRomriGsoWP1pzz1isFgRGJ65A8=',
+  SERVER_URL: 'https://api.abchub.com.br',
 };
