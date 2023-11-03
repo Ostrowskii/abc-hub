@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { API_URL } from 'variables';
 
 @Component({
   selector: 'app-google-button',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class GoogleButtonComponent {
   redirect() {
-    window.open('https://api-abchub.lowee.xyz/api/connect/google', '_self');
+    window.open(API_URL + '/connect/google', '_self');
   }
 }
