@@ -55,5 +55,9 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
-  ]
+  ],
+  "description": "ABC HUB é uma plataforma preparada para te ajudar a aumentar a sua produtividade no campo usando as práticas de agricultura de baixo carbono do plano ABC+.",
+  "lang": "pt",
+  "orientation": "portrait",
+  "categories": ["education", "productivity", "utilities"]
 }
