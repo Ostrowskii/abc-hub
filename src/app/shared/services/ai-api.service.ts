@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AiApiService {
   API_AI =
-    'https://ai-abchub.lowee.xyz/api/v1/prediction/4fb106ee-5214-4616-a7b1-3b48a9e5770d';
+    'https://ai.abchub.com.br/api/v1/prediction/4fb106ee-5214-4616-a7b1-3b48a9e5770d';
 
   constructor(private http: HttpClient) {}
 
