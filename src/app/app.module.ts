@@ -10,9 +10,10 @@ import { AuthModule } from './pages/auth/auth.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './shared/_interceptors/token.interceptor';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { PrivacidadeComponent } from './privacidade/privacidade.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PrivacidadeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

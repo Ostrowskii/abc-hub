@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { CreateAccountComponent } from './pages/auth/create-account/create-account.component';
 import { authGuard } from './shared/__guards/auth.guard';
 import { SocialCommentsComponent } from './pages/main-layout/social-comments/social-comments.component';
+import { PrivacidadeComponent } from './privacidade/privacidade.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'create-account',
     component: CreateAccountComponent,
+  },
+  {
+    path: 'privacidade',
+    component: PrivacidadeComponent,
   },
   {
     path: '**',
